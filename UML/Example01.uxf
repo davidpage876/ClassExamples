@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>820</y>
+      <w>160</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>*Student*
+--
+-name: string
+--
++Student(name: string)
+style=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>430</y>
+      <w>260</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>*Subject*
+--
+-code: string
+-name: string
+-studentsEnrolled: Student[0..*]
+--
++Subject(code: string, name: string)
+
++getCode(): string
++getName(): string
++getStudentsEnrolled(): Student[0..*]
+
++enrolStudent(student: Student): void
++unenrolStudent(student: Student): void
+style=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>700</x>
+      <y>640</y>
+      <w>120</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+is enrolled in ^</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
