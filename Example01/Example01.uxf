@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>18</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>680</x>
-      <y>820</y>
-      <w>160</w>
-      <h>80</h>
+      <x>504</x>
+      <y>882</y>
+      <w>288</w>
+      <h>180</h>
     </coordinates>
     <panel_attributes>*Student*
 --
 -name: string
 --
 +Student(name: string)
++getName(): string
 style=autoresize</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>680</x>
-      <y>430</y>
-      <w>260</w>
-      <h>240</h>
+      <x>504</x>
+      <y>180</y>
+      <w>468</w>
+      <h>432</h>
     </coordinates>
     <panel_attributes>*Subject*
 --
@@ -46,15 +47,179 @@ style=autoresize</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>700</x>
-      <y>660</y>
-      <w>120</w>
-      <h>180</h>
+      <x>540</x>
+      <y>594</y>
+      <w>216</w>
+      <h>324</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
 m2=0..*
 is enrolled in ^</panel_attributes>
     <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2628</x>
+      <y>306</y>
+      <w>108</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Subject
+--
+--
+style=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>2628</x>
+      <y>612</y>
+      <w>450</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Student
+--
+enrolledIn: Subject[0..*]
+--
++enrolIn(subject: Subject): void
++getSubjectsEnrolledIn(): Subject[0..*]
+style=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>2700</x>
+      <y>378</y>
+      <w>216</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+is enrolled in ^</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3204</x>
+      <y>306</y>
+      <w>468</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Subject
+--
+studentsEnrolled: Student[0..*]
+--
++enrolIn(student: Student): void
++getStudentsEnrolledIn(): Student[0..*]
+--
+style=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>3276</x>
+      <y>468</y>
+      <w>216</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+is enrolled in ^</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>3204</x>
+      <y>684</y>
+      <w>108</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Student
+--
+--
+style=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>2574</x>
+      <y>1206</y>
+      <w>540</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>In the business is it normal to want to know
+which subjects a particular student is enrolled
+in? E.g. to report an enrolment summary.
+
+style=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>3168</x>
+      <y>1206</y>
+      <w>504</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>In the business is it normal to want to know
+all the students enrolled in a subject? E.g. 
+to track student assessment submissions
+and assign them to teachers.
+
+style=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1602</x>
+      <y>324</y>
+      <w>108</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Subject
+--
+--
+style=autoresize</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1674</x>
+      <y>396</y>
+      <w>216</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=0..*
+is enrolled in ^</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1602</x>
+      <y>630</y>
+      <w>108</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Student
+--
+--
+style=autoresize</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
