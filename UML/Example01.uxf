@@ -23,7 +23,7 @@ style=autoresize</panel_attributes>
       <x>680</x>
       <y>430</y>
       <w>260</w>
-      <h>220</h>
+      <h>240</h>
     </coordinates>
     <panel_attributes>*Subject*
 --
@@ -35,6 +35,7 @@ style=autoresize</panel_attributes>
 
 +getCode(): string
 +getName(): string
++getNameWithCode(): string
 +getStudentsEnrolled(): Student[0..*]
 
 +enrolStudent(student: Student): void
@@ -46,14 +47,14 @@ style=autoresize</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>700</x>
-      <y>640</y>
+      <y>660</y>
       <w>120</w>
-      <h>200</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=0..*
 m2=0..*
 is enrolled in ^</panel_attributes>
-    <additional_attributes>10.0;180.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;160.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
